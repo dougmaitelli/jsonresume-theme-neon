@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-neon",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Dark digital purple JSON Resume theme",
   "type": "module",
   "main": "index.js",
