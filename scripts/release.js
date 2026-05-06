@@ -52,7 +52,7 @@ const release = (choice) => {
 
   // 4. Publish to npm
   console.log(`  [4/4] Publishing to npm...`)
-  execSync(`npm publish --access public`, { stdio: 'inherit' })
+  execSync(`yarn publish --access public`, { stdio: 'inherit' })
 
   console.log(`\n  Published v${next} to npm!\n`)
   console.log(`  Next steps:`)
