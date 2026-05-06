@@ -52,12 +52,15 @@ const release = (choice) => {
 
   // 4. Publish to npm
   console.log(`  [4/4] Publishing to npm...`)
-  execSync(`yarn publish --access public`, { stdio: 'inherit' })
+  execSync(`yarn publish --new-version ${next} --access public`, { stdio: 'inherit' })
 
   console.log(`\n  Published v${next} to npm!\n`)
   console.log(`  Next steps:`)
   console.log(`    git push origin ${defaultBranch}`)
   console.log(`    git push origin v${next}\n`)
+
+  execSync(`git push origin ${defaultBranch}`, { stdio: 'inherit' })
+  execSync(`git push origin v${next}`, { stdio: 'inherit' })
 }
 
 // Allow: npm run release -- --patch, npm run release -- --minor, npm run release -- --major
