@@ -32,8 +32,8 @@ export default function Work(work = []) {
               <article class="card card-glow">
                 <header>
                   <div>
-                    <span class="position">${singleItem ? singleItem.position : Link(url, name)}</span>
-                    ${!singleItem && html` at <span class="company">${Link(url, name)}</span>`}
+                    <span class="position">${singleItem ? singleItem.position : description}</span>
+                    at <span class="company">${Link(url, name)}</span>
                   </div>
                   <div class="meta">
                     ${singleItem
@@ -43,7 +43,6 @@ export default function Work(work = []) {
                           ${singleItem.location && html`<span>${singleItem.location}</span>`}
                         `
                       : html`
-                          ${description && html`<span>${description}</span>`}
                           ${items.some(item => item.startDate) && html`<span>${Duration(items)}</span>`}
                         `}
                   </div>
