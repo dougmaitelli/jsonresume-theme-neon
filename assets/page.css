@@ -531,4 +531,20 @@ section {
     display: none;
   }
 
+  .card-stack {
+    display: block;
+  }
+
+  .card-stack > .card {
+    margin-bottom: 1.2em;
+  }
+
+  .timeline > div {
+    break-inside: avoid;
+  }
+
+  .card header {
+    break-after: avoid;
+  }
+
 }
