@@ -1,4 +1,4 @@
-import micromark from 'micromark'
+import { micromark } from 'micromark'
 import striptags from 'striptags'
 
 /**
@@ -7,7 +7,6 @@ import striptags from 'striptags'
  * @returns
  */
 export default function markdown(doc, stripTags = false) {
-  // @ts-expect-error missing micromark types
-  const html = /** @type {string} */ (micromark(doc))
+  const html = micromark(doc)
   return stripTags ? striptags(html) : html
 }
